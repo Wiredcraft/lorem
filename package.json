@@ -25,14 +25,12 @@
   "dependencies": {},
   "devDependencies": {
     "gulp": "latest",
-    "gulp-cached": "latest",
     "gulp-coffee": "latest",
     "gulp-coffeelint": "latest",
     "gulp-jshint": "latest",
     "gulp-mocha": "latest",
     "gulp-util": "latest",
     "jshint-stylish": "latest",
-    "mocha": "latest",
     "should": "latest"
   },
   "scripts": {}
