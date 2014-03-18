@@ -22,8 +22,12 @@
     "url": "https://github.com/devo-ps/lorem/issues"
   },
   "homepage": "https://github.com/devo-ps/lorem",
-  "dependencies": {},
+  "dependencies": {
+    "debug": "0.x"
+  },
   "devDependencies": {
+    "carcass": "latest",
+    "carcass-config": "latest",
     "gulp": "latest",
     "gulp-coffee": "latest",
     "gulp-coffeelint": "latest",

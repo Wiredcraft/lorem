@@ -1,12 +1,8 @@
-var lorem = require('../');
+var lib = require('../');
 
-describe('Lorem:', function() {
+describe('Index:', function() {
 
-    it('should be a function', function() {
-        lorem.should.be.type('function');
-    });
-
-    it('should return lorem', function() {
-        lorem().should.equal('lorem');
+    it('should be an object', function() {
+        lib.should.be.type('object');
     });
 });
