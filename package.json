@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "description": "A template for Node.js modules or projects.",
   "author": {
-    "name": "devo.ps",
-    "email": "info@devo.ps",
-    "url": "https://github.com/devo-ps"
+    "name": "Wiredcraft",
+    "email": "info@wiredcraft.com",
+    "url": "http://wiredcraft.com"
   },
   "contributors": [],
   "keywords": [
@@ -16,14 +16,14 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/devo-ps/lorem.git"
+    "url": "https://github.com/Wiredcraft/lorem.git"
   },
   "bugs": {
-    "url": "https://github.com/devo-ps/lorem/issues"
+    "url": "https://github.com/Wiredcraft/lorem/issues"
   },
-  "homepage": "https://github.com/devo-ps/lorem",
+  "homepage": "https://github.com/Wiredcraft/lorem",
   "dependencies": {
-    "debug": "0.x"
+    "debug": "*"
   },
   "devDependencies": {
     "carcass": "latest",
