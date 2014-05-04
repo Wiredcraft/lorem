@@ -7,6 +7,9 @@ template: index.jade
 
 A template for Node.js modules or projects.
 
+* [Source code](https://github.com/Wiredcraft/lorem)
+* [Releases](https://github.com/Wiredcraft/lorem/blob/master/History.md)
+
 ## How to use
 
 * Clone.

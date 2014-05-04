@@ -1,6 +1,6 @@
 {
   "name": "lorem",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A template for Node.js modules or projects.",
   "author": {
     "name": "Wiredcraft",

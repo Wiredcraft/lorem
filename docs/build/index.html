@@ -1,5 +1,9 @@
-<!DOCTYPE html><html lang="en"><head><title>Lorem</title><link rel="stylesheet" href="/lorem/assets/vendor.css"><link rel="stylesheet" href="/lorem/assets/style.css"><script src="/lorem/assets/vendor.js"></script></head><body data-spy="scroll" data-target="#nav"><nav id="nav"><section><a href="#" class="title">Top</a></section><section><a href="#api" class="title">API list</a><ul class="nav"><li><a href="#lorem">Lorem</a></li></ul></section></nav><section id="main"><section class="hero"><h1>Lorem</h1><h2 id="introduction">Introduction</h2>
+<!DOCTYPE html><html lang="en"><head><title>Lorem</title><link rel="stylesheet" href="/lorem/assets/vendor.css"><link rel="stylesheet" href="/lorem/assets/style.css"><script src="/lorem/assets/vendor.js"></script></head><body data-spy="scroll" data-target="#nav"><nav id="nav"><section><a href="#" class="title">Top</a></section><section><a href="#api" class="title">API list</a><ul class="nav"><li><a href="#lorem">Lorem</a></li></ul></section><section><a href="#about" class="title">About</a><ul class="nav"><li><a href="#docs">The Docs</a></li></ul></section></nav><section id="main"><section class="hero"><h1>Lorem</h1><h2 id="introduction">Introduction</h2>
 <p>A template for Node.js modules or projects.</p>
+<ul>
+<li><a href="https://github.com/Wiredcraft/lorem">Source code</a></li>
+<li><a href="https://github.com/Wiredcraft/lorem/blob/master/History.md">Releases</a></li>
+</ul>
 <h2 id="how-to-use">How to use</h2>
 <ul>
 <li>Clone.</li>
@@ -19,4 +23,24 @@
 </ul>
 <p><em>More coming...</em></p>
 </section><section class="details"><a id="api" href="#api"></a><h2 id="lorem">Lorem<a href="#lorem"></a></h2><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</section><section class="details"><a id="about" href="#about"></a><h2 id="docs">The Docs<a href="#docs"></a></h2><h3 id="development">Development</h3>
+<p>We require 0 Ruby gems. We use bower but vendor is pre-built so you don&#39;t need to run <code>bower install</code>.</p>
+<ul>
+<li><code>npm -g install gulp</code></li>
+<li><code>npm install</code></li>
+<li><code>gulp</code></li>
+<li><a href="http://127.0.0.1:4321/">http://127.0.0.1:4321/</a></li>
+</ul>
+<h3 id="authoring">Authoring</h3>
+<ul>
+<li>Docs are organized in sub-directories in <code>/src</code>. For example, <code>/src/api</code>.</li>
+<li>For the build system to see the directories, they need to be in <code>/docs.json</code>.</li>
+<li>Files are markdown with YAML header.</li>
+</ul>
+<h3 id="deploy">Deploy</h3>
+<ul>
+<li><code>gulp dist</code></li>
+<li><code>git commit ...</code> etc. You need to track the build result with the main branch for <code>git subtree</code> to work.</li>
+<li><code>git subtree push --prefix docs/build origin gh-pages</code></li>
+</ul>
 </section></section></body></html>
