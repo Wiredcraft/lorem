@@ -8,5 +8,10 @@
         "title": "About",
         "pattern": "about/*.md",
         "sortBy": "weight"
+    },
+    "links": {
+        "title": "Links",
+        "pattern": "links/*.md",
+        "sortBy": "weight"
     }
 }

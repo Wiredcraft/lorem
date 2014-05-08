@@ -17,7 +17,7 @@ We require 0 Ruby gems. We use bower but vendor is pre-built so you don't need t
 ### Authoring
 
 * Docs are organized in sub-directories in `/src`. For example, `/src/api`.
-* For the build system to see the directories, they need to be in `/docs.json`.
+* For the build system to see the directories, they need to be in `/src/docs.json`.
 * Files are markdown with YAML header.
 
 ### Deploy
