@@ -5,6 +5,8 @@ title: The Docs
 template: doc.jade
 ---
 
+Docs is committed to [`/docs`](https://github.com/Wiredcraft/lorem/tree/master/docs) and hosted with Github pages. It is a single page website. The `/docs` folder is self-contained and can be copied to wherever to build a new site (doesn't need to be a sub-folder). Just make sure you have the build result committed and deploy with the right command (see below).
+
 ### Development
 
 We require 0 Ruby gems. We use bower but vendor is pre-built so you don't need to run `bower install`.
