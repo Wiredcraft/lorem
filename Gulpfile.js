@@ -16,22 +16,20 @@ var tests = 'test/*.mocha.js';
 // Compile coffee scripts.
 gulp.task('coffee', function() {
     return gulp.src(src)
-        .pipe(coffeelint({
-            max_line_length: {
-                value: 100
-            },
-            indentation: {
-                value: 4
-            }
-        }))
-        .pipe(coffeelint.reporter())
         .pipe(coffee({
             bare: true
         }).on('error', gutil.log))
         .pipe(gulp.dest('./'));
 });
 
-// Run jshint.
+// Lint (or hint as an alias).
+gulp.task('lint', ['coffeelint', 'jshint']);
+gulp.task('hint', ['coffeelint', 'jshint']);
+gulp.task('coffeelint', function() {
+    return gulp.src(src)
+        .pipe(coffeelint())
+        .pipe(coffeelint.reporter());
+});
 gulp.task('jshint', function() {
     return gulp.src(['Gulpfile.js', tests])
         .pipe(jshint())
@@ -39,11 +37,11 @@ gulp.task('jshint', function() {
 });
 
 // Run tests.
-gulp.task('mocha', ['coffee', 'jshint'], function() {
+gulp.task('mocha', ['coffee'], function() {
     return gulp.src(tests)
         .pipe(mocha({
             reporter: 'spec'
         }));
 });
 
-gulp.task('default', ['coffee', 'jshint', 'mocha']);
+gulp.task('default', ['coffeelint', 'jshint', 'coffee', 'mocha']);

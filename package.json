@@ -23,9 +23,9 @@
   },
   "homepage": "https://github.com/Wiredcraft/lorem",
   "dependencies": {
-    "carcass": "~0.11.0",
-    "carcass-config": "~0.2.0",
-    "debug": "*"
+    "carcass": "0.11.5",
+    "carcass-config": "0.2.2",
+    "debug": "latest"
   },
   "devDependencies": {
     "gulp": "latest",
