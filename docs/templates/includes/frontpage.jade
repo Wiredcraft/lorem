@@ -1,0 +1,9 @@
+for coll, key in promoted
+    section.details
+        a(id='#{key}', href='##{key}')
+        for doc in coll
+            if !doc.external
+                h2(id='#{doc.id}')
+                    = doc.title
+                    a(href='##{doc.id}')
+                != doc.contents

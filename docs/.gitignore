@@ -1,2 +1,11 @@
+.*
+!.gitignore
+!.npmignore
+!.jshintrc
+
+*.orig
+
+npm-debug.log
+node_modules
 bower_components
 preview

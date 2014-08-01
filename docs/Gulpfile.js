@@ -4,57 +4,10 @@ var minifyCSS = require('gulp-minify-css');
 var uglify = require('gulp-uglify');
 var serve = require('gulp-serve');
 
-var Metalsmith = require('metalsmith');
-var collections = require('metalsmith-collections');
-var ignore = require('metalsmith-ignore');
-var markdown = require('metalsmith-markdown');
-var metadata = require('metalsmith-metadata');
-var sass = require('metalsmith-sass');
-var templates = require('metalsmith-templates');
-
-var highlight = require('highlight.js');
+var metalsmith = require('./metalsmith');
 
 var path = require('path');
 var root = path.resolve(__dirname);
-
-var docs = require('./src/docs.json');
-
-function buildIndex(files, metalsmith, done) {
-    var metadata = metalsmith.metadata();
-    metadata.index = {};
-    var key;
-    for (key in docs) {
-        metadata.index[key] = docs[key].title;
-    }
-    done();
-}
-
-// Metalsmith.
-function metalsmith(options, done) {
-    Metalsmith(root)
-        .destination(options.destination || 'build')
-        .use(metadata({
-            meta: options.meta || 'meta.yaml'
-        }))
-        .use(sass({
-            outputStyle: 'compressed'
-        }))
-        .use(collections(docs))
-        .use(buildIndex)
-        .use(markdown({
-            gfm: true,
-            highlight: function(code, lang) {
-                if (lang) return highlight.highlight(lang, code).value;
-                return highlight.highlightAuto(code).value;
-            }
-        }))
-        .use(templates('jade'))
-        .use(ignore([
-            '**/_*',
-            '*.yaml'
-        ]))
-        .build(done);
-}
 
 // Dist.
 gulp.task('dist', function(done) {
@@ -87,7 +40,7 @@ gulp.task('preview-server', serve({
 }));
 
 // Vendor.
-gulp.task('vendor', ['vendorJS', 'vendorCSS']);
+gulp.task('vendor', ['vendorJS']);
 
 // Vendor.
 gulp.task('vendorJS', function() {
@@ -104,9 +57,7 @@ gulp.task('vendorJS', function() {
 // Vendor.
 gulp.task('vendorCSS', function() {
     return gulp
-        .src([
-            root + '/bower_components/normalize-css/normalize.css'
-        ])
+        .src([])
         .pipe(concat('vendor.css'))
         .pipe(minifyCSS())
         .pipe(gulp.dest(root + '/src/assets'));

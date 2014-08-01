@@ -31,7 +31,7 @@ gulp.task('coffeelint', function() {
         .pipe(coffeelint.reporter());
 });
 gulp.task('jshint', function() {
-    return gulp.src(['Gulpfile.js', tests])
+    return gulp.src(['*.js', 'docs/*.js', 'mock/*.js', tests])
         .pipe(jshint())
         .pipe(jshint.reporter('jshint-stylish'));
 });

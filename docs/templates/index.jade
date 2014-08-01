@@ -1,34 +1,7 @@
-doctype html
-html(lang='en')
-    head
-        title= title
-        link(rel='stylesheet', href='#{meta.base}/assets/vendor.css')
-        link(rel='stylesheet', href='#{meta.base}/assets/style.css')
-        script(src='#{meta.base}/assets/vendor.js')
-    body(data-spy='scroll', data-target='#nav')
-        nav#nav
-            section
-                a.title(href='#') Top
-            for coll, key in collections
-                section
-                    a.title(href='##{key}')= index[key]
-                    ul.nav
-                        for doc in coll
-                            li
-                                if doc.external
-                                    a.external(href='#{doc.external}', target='_blank')= doc.title
-                                else
-                                    a(href='##{doc.id}')= doc.title
-        section#main
-            section.hero
-                h1= title
-                != contents
-            for coll, key in collections
-                section.details
-                    a(id='#{key}', href='##{key}')
-                    for doc in coll
-                        if !doc.external
-                            h2(id='#{doc.id}')
-                                = doc.title
-                                a(href='##{doc.id}')
-                            != doc.contents
+extends ./includes/main
+block main
+    a(id='#', href='#{meta.base}/#')
+    section.hero
+        h1= title
+        != contents
+    include ./includes/frontpage
