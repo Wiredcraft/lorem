@@ -34,7 +34,8 @@ function metalsmith(options, done) {
         }))
         .use(sass({
             outputStyle: 'compressed',
-            includePaths: eggshell.includePaths
+            includePaths: eggshell.includePaths,
+            outputDir: 'assets/css'
         }))
         .use(collections(docs))
         .use(collectionMeta)

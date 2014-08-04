@@ -1,0 +1,25 @@
+include ./link
+#logo
+  a(href='#{meta.base}/#')
+    img(src='', alt='')
+    span Lorem
+#menu
+  ul
+    for coll, key in promoted
+      li
+        a(href='##{key}')= meta.collections[key].title
+        ul
+          for doc in coll
+            li: +link(doc)
+    for coll, key in notPromo
+      li
+        a.title(href='')= meta.collections[key].title
+        ul
+          for doc in coll
+            li: +link(doc)
+#fork
+  a.button.add(href='#')
+    i.icon-github
+    | fork me on
+    strong Github
+

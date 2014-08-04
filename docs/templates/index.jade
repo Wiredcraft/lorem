@@ -1,7 +1,6 @@
-extends ./includes/main
-block main
-    a(id='#', href='#{meta.base}/#')
-    section.hero
-        h1= title
-        != contents
-    include ./includes/frontpage
+extends ./includes/layout
+block content
+  section
+    != contents
+  include ./includes/frontpage
+
