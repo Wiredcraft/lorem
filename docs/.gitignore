@@ -2,6 +2,7 @@
 !.gitignore
 !.npmignore
 !.jshintrc
+logs
 
 *.orig
 
