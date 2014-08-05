@@ -1,8 +1,0 @@
-for coll, key in promoted
-  section(id='#{key}')
-    for doc in coll
-      if !doc.external
-        h2(id='#{doc.id}')
-          = doc.title
-          a(href='##{doc.id}')
-        != doc.contents
