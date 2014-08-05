@@ -51,7 +51,7 @@ gulp.task('vendorJS', function() {
         ])
         .pipe(concat('vendor.js'))
         .pipe(uglify())
-        .pipe(gulp.dest(root + '/src/assets'));
+        .pipe(gulp.dest(root + '/src/assets/js'));
 });
 
 // Vendor.
@@ -60,5 +60,5 @@ gulp.task('vendorCSS', function() {
         .src([])
         .pipe(concat('vendor.css'))
         .pipe(minifyCSS())
-        .pipe(gulp.dest(root + '/src/assets'));
+        .pipe(gulp.dest(root + '/src/assets/css'));
 });
