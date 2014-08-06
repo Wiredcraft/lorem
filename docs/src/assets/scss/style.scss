@@ -98,6 +98,7 @@ hr {
     @include padding(13px null 13px null);
   }
   .icon-github {
+    font-weight: bold;
     margin-right: 3px;
     @include position(relative, 1px null null null);
   }
