@@ -1,25 +1,84 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Resource and Actions</title><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="/lorem/assets/css/style.css"><script src="/lorem/assets/js/vendor.js"></script></head><body data-spy="scroll" data-target="#nav"><div id="sidebar"><div id="logo"><a href="/lorem/#"><img src="" alt=""><span>Lorem</span></a></div><div id="menu"><ul><li><a href="#about">About</a><ul><li><a href="/lorem/#about-the-docs">The Docs</a></li></ul></li><li><a href="" class="title">API list</a><ul><li><a href="/lorem/api/simplest">Simplest</a></li><li><a href="/lorem/api/resource-and-actions">Resource and Actions</a></li></ul></li><li><a href="" class="title">Links</a><ul><li><a href="https://github.com/Wiredcraft/lorem" target="_blank" class="external">Source code</a></li><li><a href="https://github.com/Wiredcraft/lorem/blob/master/History.md" target="_blank" class="external">History</a></li></ul></li></ul></div><div id="fork"><a href="#" class="button add"><i class="icon-github"></i>fork me on<strong>Github</strong></a></div></div><div id="content"><article id="document"><section><p>FORMAT: 1A</p>
-<h1 id="resource-and-actions-api">Resource and Actions API</h1>
-<p>This API example demonstrates how to define a resource with multiple actions.</p>
-<h1 id="-message">/message</h1>
-<p>This is our <a href="http://www.w3.org/TR/di-gloss/#def-resource">resource</a>. It is defined by its <a href="http://www.w3.org/TR/di-gloss/#def-uniform-resource-identifier">URI</a> or, more precisely, by its <a href="http://tools.ietf.org/html/rfc6570">URI Template</a>.</p>
-<p>This resource has no actions specified but we will fix that soon.</p>
-<h2 id="get">GET</h2>
-<p>Here we define an action using the <code>GET</code> <a href="http://www.w3schools.com/tags/ref_httpmethods.asp">HTTP request method</a> for our resource <code>/message</code>.</p>
-<p>As with every good action it should return a <a href="http://www.w3.org/TR/di-gloss/#def-http-response">response</a>. A response always bears a status code. Code 200 is great as it means all is green. Responding with some data can be a great idea as well so let&#39;s add a plain text message to our response.</p>
-<ul>
-<li>Response 200 (text/plain)</li>
-</ul>
-<pre><code class="lang-md">Hello World!
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Resource and Actions</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/lorem/assets/css/style.css">
+	<script src="/lorem/assets/js/vendor.js"></script>
+</head>
+
+<body data-spy="scroll" data-target="#nav">
+	<div id="sidebar">
+		<div id="logo">
+			<a href="/lorem/#">
+				<img src="" alt=""><span>Lorem</span>
+			</a>
+		</div>
+		<div id="menu">
+			<ul>
+				<li><a href="#about">About</a>
+					<ul>
+						<li><a href="/lorem/#about-the-docs">The Docs</a>
+						</li>
+					</ul>
+				</li>
+				<li><a href="" class="title">API list</a>
+					<ul>
+						<li><a href="/lorem/api/simplest">Simplest</a>
+						</li>
+						<li><a href="/lorem/api/resource-and-actions">Resource and Actions</a>
+						</li>
+					</ul>
+				</li>
+				<li><a href="" class="title">Links</a>
+					<ul>
+						<li><a href="https://github.com/Wiredcraft/lorem" target="_blank" class="external">Source code</a>
+						</li>
+						<li><a href="https://github.com/Wiredcraft/lorem/blob/master/History.md" target="_blank" class="external">History</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div id="fork"><a href="#" class="button add"><i class="icon-github"></i>fork me on <strong>Github</strong></a>
+		</div>
+	</div>
+	<div id="content">
+		<article id="document">
+			<section>
+				<p>FORMAT: 1A</p>
+				<h1 id="resource-and-actions-api">Resource and Actions API</h1>
+				<p>This API example demonstrates how to define a resource with multiple actions.</p>
+				<h1 id="-message">/message</h1>
+				<p>This is our <a href="http://www.w3.org/TR/di-gloss/#def-resource">resource</a>. It is defined by its <a href="http://www.w3.org/TR/di-gloss/#def-uniform-resource-identifier">URI</a> or,
+					more precisely, by its <a href="http://tools.ietf.org/html/rfc6570">URI Template</a>.</p>
+				<p>This resource has no actions specified but we will fix that soon.</p>
+				<h2 id="get">GET</h2>
+				<p>Here we define an action using the <code>GET</code>  <a href="http://www.w3schools.com/tags/ref_httpmethods.asp">HTTP request method</a> for our resource <code>/message</code>.</p>
+				<p>As with every good action it should return a <a href="http://www.w3.org/TR/di-gloss/#def-http-response">response</a>. A response always bears a status code. Code
+					200 is great as it means all is green. Responding with some data can be a great idea as well so let&#39;s add a plain text message to our response.</p>
+				<ul>
+					<li>Response 200 (text/plain)</li>
+				</ul>
+				<pre><code class="lang-md">Hello World!
 </code></pre>
-<h2 id="put">PUT</h2>
-<p>OK, let&#39;s add another action. This time to put new data to our resource (essentially an update action). We will need to send something in a <a href="http://www.w3.org/TR/di-gloss/#def-http-request">request</a> and then send a response back confirming the posting was a success (HTTP Status Code 204 ~ Resource updated successfully, no content is returned).</p>
-<ul>
-<li>Request (text/plain)</li>
-</ul>
-<pre><code class="lang-md">All your base are belong to us.
+				<h2 id="put">PUT</h2>
+				<p>OK, let&#39;s add another action. This time to put new data to our resource (essentially an update action). We will need to send something in a <a href="http://www.w3.org/TR/di-gloss/#def-http-request">request</a> and
+					then send a response back confirming the posting was a success (HTTP Status Code 204 ~ Resource updated successfully, no content is returned).</p>
+				<ul>
+					<li>Request (text/plain)</li>
+				</ul>
+				<pre><code class="lang-md">All your base are belong to us.
 </code></pre>
-<ul>
-<li>Response 204</li>
-</ul>
-</section></article></div></body></html>
+				<ul>
+					<li>Response 204</li>
+				</ul>
+			</section>
+		</article>
+	</div>
+</body>
+
+</html>

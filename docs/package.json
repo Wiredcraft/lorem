@@ -27,6 +27,7 @@
     "jade": "latest",
     "lodash": "latest",
     "metalsmith": "latest",
+    "metalsmith-beautify": "latest",
     "metalsmith-collections": "latest",
     "metalsmith-ignore": "latest",
     "metalsmith-markdown": "latest",

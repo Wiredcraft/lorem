@@ -16,8 +16,9 @@ Docs is committed to [`/docs`](https://github.com/Wiredcraft/lorem/tree/master/d
 
 We require 0 Ruby gems. We use bower but vendor is pre-built so you don't need to run `bower install`.
 
-* `npm install`
-* `gulp`
+* In `/docs`:
+    * `npm install`
+    * `gulp`
 * [http://127.0.0.1:4321/](http://127.0.0.1:4321/)
 
 ### Authoring
@@ -28,11 +29,13 @@ We require 0 Ruby gems. We use bower but vendor is pre-built so you don't need t
 
 ### Deployment
 
-* `npm install`
-* `gulp dist`
-* `git commit ...` etc. You need to track the build result (`docs/build`) with the main branch for `git subtree` to work.
-* `git subtree push --prefix docs/build origin gh-pages`
-* Or if you needed to force the push:
-  ```bash
-  git push origin `git subtree split --prefix docs/build master`:gh-pages --force
-  ```
+* In `/docs`:
+    * `npm install`
+    * `gulp dist`
+* In `/`:
+    * `git commit ...` etc. You need to track the build result (`/docs/build`) with the main branch (usually `master`) for `git subtree` to work.
+    * `git subtree push --prefix docs/build origin gh-pages`
+    * Or if you needed to force the push:
+      ```bash
+      git push origin `git subtree split --prefix docs/build master`:gh-pages --force
+      ```

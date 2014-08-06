@@ -2,6 +2,7 @@ process.env.DEBUG = 'lorem:*';
 var debug = require('debug')('lorem:gulp');
 
 var Metalsmith = require('metalsmith');
+var beautify = require('metalsmith-beautify');
 var collections = require('metalsmith-collections');
 var ignore = require('metalsmith-ignore');
 var markdown = require('metalsmith-markdown');
@@ -56,6 +57,10 @@ function metalsmith(options, done) {
             '**/_*',
             '*.yaml'
         ]))
+        .use(beautify({
+            js: false,
+            css: false
+        }))
         // .use(_debug)
         .build(done);
 }
