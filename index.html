@@ -1,50 +1,133 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Lorem</title><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="/lorem/assets/css/style.css"><script src="/lorem/assets/js/vendor.js"></script></head><body data-spy="scroll" data-target="#nav"><div id="sidebar"><div id="logo"><a href="/lorem/#"><img src="" alt=""><span>Lorem</span></a></div><div id="menu"><ul><li><a href="#about">About</a><ul><li><a href="/lorem/#about-the-docs">The Docs</a></li></ul></li><li><a href="" class="title">API list</a><ul><li><a href="/lorem/api/simplest">Simplest</a></li><li><a href="/lorem/api/resource-and-actions">Resource and Actions</a></li></ul></li><li><a href="" class="title">Links</a><ul><li><a href="https://github.com/Wiredcraft/lorem" target="_blank" class="external">Source code</a></li><li><a href="https://github.com/Wiredcraft/lorem/blob/master/History.md" target="_blank" class="external">History</a></li></ul></li></ul></div><div id="fork"><a href="#" class="button add"><i class="icon-github"></i>fork me on<strong>Github</strong></a></div></div><div id="content"><article id="document"><section><h2 id="introduction">Introduction</h2>
-<p>A template for Node.js modules or projects.</p>
-<h2 id="how-to-use">How to use</h2>
-<ul>
-<li>Clone.</li>
-<li>Copy whatever you need.</li>
-</ul>
-<h2 id="what-s-included">What&#39;s included</h2>
-<ul>
-<li><code>package.json</code>.</li>
-<li><code>Gulpfile.js</code>:<ul>
-<li>Coffee and Coffeelint.</li>
-<li>Jshint.</li>
-<li>Mocha.</li>
-</ul>
-</li>
-<li>An example class <code>Lorem</code>.</li>
-<li>An example example which uses config files.</li>
-</ul>
-<p><em>More coming...</em></p>
-</section><section id="about"><h2 id="about-the-docs">The Docs<a href="#about-the-docs"></a></h2><p>Docs is committed to <a href="https://github.com/Wiredcraft/lorem/tree/master/docs"><code>/docs</code></a> and hosted with Github pages. It is a single page website. The <code>/docs</code> folder is self-contained and can be copied to wherever to build a new site (doesn&#39;t need to be a sub-folder). Just make sure you have the build result committed and deploy with the right command (see below).</p>
-<h3 id="requirements">Requirements</h3>
-<ul>
-<li>Node and NPM.</li>
-<li><code>npm -g install gulp</code></li>
-</ul>
-<h3 id="development">Development</h3>
-<p>We require 0 Ruby gems. We use bower but vendor is pre-built so you don&#39;t need to run <code>bower install</code>.</p>
-<ul>
-<li><code>npm install</code></li>
-<li><code>gulp</code></li>
-<li><a href="http://127.0.0.1:4321/">http://127.0.0.1:4321/</a></li>
-</ul>
-<h3 id="authoring">Authoring</h3>
-<ul>
-<li>Docs are organized in sub-directories in <code>/src</code>. For example, <code>/src/api</code>.</li>
-<li>For the build system to see the directories, they need to be in <code>/src/docs.json</code>.</li>
-<li>Files are markdown with YAML header.</li>
-</ul>
-<h3 id="deployment">Deployment</h3>
-<ul>
-<li><code>npm install</code></li>
-<li><code>gulp dist</code></li>
-<li><code>git commit ...</code> etc. You need to track the build result (<code>docs/build</code>) with the main branch for <code>git subtree</code> to work.</li>
-<li><code>git subtree push --prefix docs/build origin gh-pages</code></li>
-<li>Or if you needed to force the push:<pre><code class="lang-bash">git push origin `git subtree split --prefix docs/build master`:gh-pages --force
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Lorem</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/lorem/assets/css/style.css">
+	<script src="/lorem/assets/js/vendor.js"></script>
+</head>
+
+<body data-spy="scroll" data-target="#nav">
+	<div id="sidebar">
+		<div id="logo">
+			<a href="/lorem/#">
+				<img src="" alt=""><span>Lorem</span>
+			</a>
+		</div>
+		<div id="menu">
+			<ul>
+				<li><a href="#about">About</a>
+					<ul>
+						<li><a href="/lorem/#about-the-docs">The Docs</a>
+						</li>
+					</ul>
+				</li>
+				<li><a href="" class="title">API list</a>
+					<ul>
+						<li><a href="/lorem/api/simplest">Simplest</a>
+						</li>
+						<li><a href="/lorem/api/resource-and-actions">Resource and Actions</a>
+						</li>
+					</ul>
+				</li>
+				<li><a href="" class="title">Links</a>
+					<ul>
+						<li><a href="https://github.com/Wiredcraft/lorem" target="_blank" class="external">Source code</a>
+						</li>
+						<li><a href="https://github.com/Wiredcraft/lorem/blob/master/History.md" target="_blank" class="external">History</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div id="fork"><a href="#" class="button add"><i class="icon-github"></i>fork me on <strong>Github</strong></a>
+		</div>
+	</div>
+	<div id="content">
+		<article id="document">
+			<section>
+				<h2 id="introduction">Introduction</h2>
+				<p>A template for Node.js modules or projects.</p>
+				<h2 id="how-to-use">How to use</h2>
+				<ul>
+					<li>Clone.</li>
+					<li>Copy whatever you need.</li>
+				</ul>
+				<h2 id="what-s-included">What&#39;s included</h2>
+				<ul>
+					<li><code>package.json</code>.</li>
+					<li><code>Gulpfile.js</code>:
+						<ul>
+							<li>Coffee and Coffeelint.</li>
+							<li>Jshint.</li>
+							<li>Mocha.</li>
+						</ul>
+					</li>
+					<li>An example class <code>Lorem</code>.</li>
+					<li>An example example which uses config files.</li>
+				</ul>
+				<p><em>More coming...</em>
+				</p>
+			</section>
+			<section id="about">
+				<h2 id="about-the-docs">The Docs<a href="#about-the-docs"></a></h2>
+				<p>Docs is committed to <a href="https://github.com/Wiredcraft/lorem/tree/master/docs"><code>/docs</code></a> and hosted with Github pages. It is a single page website.
+					The <code>/docs</code> folder is self-contained and can be copied to wherever to build a new site (doesn&#39;t need to be a sub-folder). Just make sure you have
+					the build result committed and deploy with the right command (see below).</p>
+				<h3 id="requirements">Requirements</h3>
+				<ul>
+					<li>Node and NPM.</li>
+					<li><code>npm -g install gulp</code>
+					</li>
+				</ul>
+				<h3 id="development">Development</h3>
+				<p>We require 0 Ruby gems. We use bower but vendor is pre-built so you don&#39;t need to run <code>bower install</code>.</p>
+				<ul>
+					<li>In <code>/docs</code>:
+						<ul>
+							<li><code>npm install</code>
+							</li>
+							<li><code>gulp</code>
+							</li>
+						</ul>
+					</li>
+					<li><a href="http://127.0.0.1:4321/">http://127.0.0.1:4321/</a>
+					</li>
+				</ul>
+				<h3 id="authoring">Authoring</h3>
+				<ul>
+					<li>Docs are organized in sub-directories in <code>/src</code>. For example, <code>/src/api</code>.</li>
+					<li>For the build system to see the directories, they need to be in <code>/src/docs.json</code>.</li>
+					<li>Files are markdown with YAML header.</li>
+				</ul>
+				<h3 id="deployment">Deployment</h3>
+				<ul>
+					<li>In <code>/docs</code>:
+						<ul>
+							<li><code>npm install</code>
+							</li>
+							<li><code>gulp dist</code>
+							</li>
+						</ul>
+					</li>
+					<li>In <code>/</code>:
+						<ul>
+							<li><code>git commit ...</code> etc. You need to track the build result (<code>/docs/build</code>) with the main branch (usually <code>master</code>) for <code>git subtree</code> to
+								work.</li>
+							<li><code>git subtree push --prefix docs/build origin gh-pages</code>
+							</li>
+							<li>Or if you needed to force the push:<pre><code class="lang-bash">git push origin `git subtree split --prefix docs/build master`:gh-pages --force
 </code></pre>
-</li>
-</ul>
-</section></article></div></body></html>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+		</article>
+	</div>
+</body>
+
+</html>
