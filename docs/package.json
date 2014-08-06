@@ -25,7 +25,6 @@
     "gulp-uglify": "latest",
     "highlight.js": "latest",
     "jade": "latest",
-    "load-metadata": "latest",
     "lodash": "latest",
     "metalsmith": "latest",
     "metalsmith-collections": "latest",

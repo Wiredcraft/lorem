@@ -30,5 +30,9 @@ We require 0 Ruby gems. We use bower but vendor is pre-built so you don't need t
 
 * `npm install`
 * `gulp dist`
-* `git commit ...` etc. You need to track the build result with the main branch for `git subtree` to work.
+* `git commit ...` etc. You need to track the build result (`docs/build`) with the main branch for `git subtree` to work.
 * `git subtree push --prefix docs/build origin gh-pages`
+* Or if you needed to force the push:
+  ```bash
+  git push origin `git subtree split --prefix docs/build master`:gh-pages --force
+  ```

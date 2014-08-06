@@ -41,7 +41,10 @@
 <ul>
 <li><code>npm install</code></li>
 <li><code>gulp dist</code></li>
-<li><code>git commit ...</code> etc. You need to track the build result with the main branch for <code>git subtree</code> to work.</li>
+<li><code>git commit ...</code> etc. You need to track the build result (<code>docs/build</code>) with the main branch for <code>git subtree</code> to work.</li>
 <li><code>git subtree push --prefix docs/build origin gh-pages</code></li>
+<li>Or if you needed to force the push:<pre><code class="lang-bash">git push origin `git subtree split --prefix docs/build master`:gh-pages --force
+</code></pre>
+</li>
 </ul>
 </section></article></div></body></html>
